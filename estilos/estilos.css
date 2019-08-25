@@ -1,0 +1,550 @@
+body{ 
+
+	background: #ffffff; /*fondo de la pagina*/
+	font-family: 'Poppins', sans-serif; /*estilo de fuente*/
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* a las clases las llamamos con punto*/
+
+.contenedor{
+
+	width: 90%; /*ancho*/
+	max-width: 1300px; /*ancho maximo del div*/
+	margin: auto; /*esto te alinea los h1, h2,etc, etc*/
+
+}
+
+header{
+
+	height: 100vh; /*100 view * height -> significa 100%alto de la ventana del navegador*/
+	background: linear-gradient(rgba(14, 14, 15, .8), rgba(26, 26, 27)),url("../imagenes/pc.jpg")
+	left no-repeat; /*ingresar imagen de fondo degradada los primeros tres numeros es el color, aquellos
+	que comienzan por el punto es el nivel de degradado*/
+	background-size: 100% 100%; /*con esto hacemos que el background se adecue al tamaño de la pantalla
+	del dispositivo*/
+
+}
+
+/*los id los llamamos con un #*/
+
+#contenedor-menu{
+
+	display: flex; /*Despliega los elementos de forma horizontal en cajas flexibles*/
+	justify-content: space-between; /*mandamos al logo a una esquina y el menu a otro lado*/
+	padding-top: 20px; /*con esto bajamos un poco el contenido del menu principal*/
+
+}
+
+header .logo a{
+
+	color: #ffffff;
+	font-size: 20px;
+	font-family: 'Righteous', cursive; /*font family importado del api de google*/
+
+}
+
+nav ul {
+
+	display: flex; /*el flex no agarra con el <li> porque tienen que asignarselo al elemento padre 
+	el cual es <lu> */
+	justify-content: space-between;
+	margin: 0px;
+	margin-top: 19px;
+
+}
+
+nav ul li {
+
+	margin-left: 23px;
+	list-style: none; /*esto es para quitar las viñetas que se generan por defecto en los elementos de 
+	ls lista*/
+	color: #ffffff;
+
+}
+
+.lista-menu a{
+
+	color: white;
+}
+
+.contenedor-titulo {
+	
+	display: flex;
+	justify-content: center;
+	margin: 18vh 0;  /*se le da el 30% de alto de la ventana del navegador*/
+
+}
+
+.contenedor-titulo h1 {
+
+	font-size: 60px;
+	color: #ffffff;
+	margin-bottom: 0px;
+
+}
+
+.contenedor-titulo h2 {
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 35px;
+
+}
+
+.contenedor-titulo a {
+
+	width: 117px;
+	display: inline-block;
+	background: grey;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 14px 24px;
+	border-radius: 5px;
+
+}
+
+.contenedor-titulo .titulo {
+
+	text-align: center;
+
+}
+
+#sobremi h3 {
+
+	text-align: center;
+	font-size: 55px;
+	font-weight: normal; /*para poner negrita*/
+}
+
+#sobremi img {
+
+    max-width: 80%;
+    height: auto;
+
+}
+
+#sobremi .contenido_sobremi {
+
+	display: flex;
+	justify-content: space-around;
+
+}
+
+#sobremi .contenido_sobremi_texto {
+
+	margin-top: -21px;
+	width: 50%; /*esto nos hace que el texto sea relativo al tamaño de la pantalla*/
+}
+
+#sobremi p{
+
+	margin-left: -23%; /*lo use para correr el texto de los parrafos a la izquierda*/
+}
+
+
+#sobremi a, #miblog a, #que-esperas a, #contacto input[type="submit"] {
+
+	background: grey;
+	font-size: 14px;
+	color: #ffffff;
+	display: inline-block;
+	margin-top: 12px;
+	padding: 15px 0;
+	width: 179px;
+	text-align: center;
+	border-radius: 5px;
+
+}
+
+#sobremi a{
+
+	margin-left: 40px;
+
+}
+
+/*  -------------------- ESTILOS MIS SERVICIOS -------------------------------- */
+
+
+#servicios h3 {
+
+	text-align: center;
+	font-size: 55px;
+	font-weight: normal; /*para poner negrita*/
+}
+
+.contenido_servicios {
+
+	display: flex;
+	flex-wrap: wrap; /*detecta si el contenido tiene mucho espacio el próximo div, baja a la otra línea*/
+	justify-content: space-around;
+
+}
+
+.servicio{
+
+	width: 24%;
+	padding: 34px 30px 38px 30px;
+	border-radius: 10px; 
+	margin-bottom: 40px;
+	position: relative; /*con esto damos la base para que el elemento que se vaya a superponer 
+	utilice los margenes de esta clase*/
+	
+}
+
+.servicio h4 {
+
+	font-size: 30px;
+	margin: 0;
+	color: white;
+
+}
+
+.servicio p {
+	
+	margin-bottom: 20px;
+	height: 194px; /*con esto indicamos que los parrafos sean del mismo tamaño y de alguna manera*/
+	color: white;
+
+}
+
+.gris {
+	
+	background: linear-gradient(to bottom, #808080 0%, #99ccff 100%); 
+	box-shadow: 10px 10px 14px 1px rgba(152,175,181,1);
+
+}
+
+.azul {
+
+	background: linear-gradient(to top, #808080 0%, #99ccff 100%);
+	box-shadow: 10px 10px 14px 1px rgba(152,175,181,1);
+
+}
+
+/*.ondas {
+
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+}*/
+
+.ondas {
+
+	position: relative;
+	margin-left: -29px;
+	margin-bottom: -44px;
+	width: 333px;
+
+}
+
+.icono {
+
+	float: right;
+	width: 28%;
+
+}
+
+/*  --------------------------------- ESTILOS MIS TRABAJOS -------------------------------- */
+
+
+button.owl-prev, button.owl-next {
+    
+    font-size: 40px !important;
+
+}
+
+span {
+
+    color: #808080;
+
+}
+
+#misTrabajos h3 {
+
+	text-align: center;
+	font-size: 55px;
+	font-weight: normal; /*para poner negrita*/
+}
+
+#misTrabajos p, a {
+
+	text-align: center;
+	color: black;
+	text-decoration: none;
+
+}
+
+/*  ------------------------------------ TRABAJAR CONMIGO ------------------------------------*/
+
+#trabajarConmigo h3 {
+
+	text-align: center;
+	font-size: 55px;
+	font-weight: normal; /*para poner negrita*/
+
+}
+
+.contenedorTrabajar {
+
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+#trabajarConmigo .item {
+
+	width: 32%;
+	text-align: center;
+
+}
+
+#trabajarConmigo ul {
+
+	list-style: none;
+}
+
+#trabajarConmigo ul li:nth-child(2) { /*esto se hace para identificar al elemento 2 de la lista*/
+
+	font-weight: bold;
+	font-size: 19px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+
+}
+
+#trabajarConmigo ul li:nth-child(3) {
+
+	line-height: 31px;
+
+}
+
+/*  --------------------------------- ESTILOS MI BLOG -------------------------------- */
+
+#miblog{
+
+	background: #f9fafc;
+}
+
+#miblog h3 {
+
+	text-align: center;
+	font-size: 55px;
+	font-weight: normal; /*para poner negrita*/
+}
+
+#miblog .contenedor-publicaciones {
+
+	display: flex;
+	justify-content: space-around;
+
+}
+
+#miblog .contenedor-publicaciones img {
+	
+	max-width: 100%;
+	height: auto;
+
+}
+
+#miblog .publicacion {
+
+	width: 40%;
+	box-shadow: 1px 1px 14px #ccc;
+
+}
+
+#miblog .contenido {
+
+	background: white;
+	padding: 20px;
+
+}
+
+#miblog h4 {
+
+	font-size: 23px;
+	margin-bottom: 15px;
+	
+}
+
+#miblog p {
+
+	color: #5a6169;
+	line-height: 24px;
+	font-size: 16px;
+}
+
+#miblog a {
+
+	width: 100px;
+}
+
+/*  ---------------------------- ESTILOS POR Q ES NECESARIO -------------------------------- */
+
+#que-esperas h3 {
+
+	text-align: center;
+	font-size: 55px;
+	font-weight: normal; /*para poner negrita*/
+}
+
+#que-esperas {
+
+	background: linear-gradient(to bottom, #808080 0%, #99ccff 100%);
+	text-align: center;
+	padding: 50px;
+	margin-top: 45px;
+}
+
+
+#que-esperas h3 {
+
+	font-size: 23px;
+	color: #fff;
+}
+
+/*  ------------------------------- ESTILOS MIS CONTACTOS ---------------------------------- */
+
+#contacto h3 {
+
+	text-align: center;
+	font-size: 55px;
+	font-weight: normal; /*para poner negrita*/
+}
+
+#contacto form {
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 77%;
+	margin: auto;
+
+}
+
+input[type="text"], input[type="email"] { /*De esa forma se llaman a los inputs*/
+
+	width: 48%;
+	margin-bottom: 15px;
+	padding: 18px, 0;
+	border: 0;
+	border-bottom: 1px solid grey;
+	font-size: 17px;
+	font-family: 'Poppins', sans-serif;
+
+
+}
+
+textarea {
+
+	padding: 18px 0;
+	border: 0;
+	border-bottom: 1px solid grey;
+	font-size: 17px;
+	margin-bottom: 40px;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+	
+}
+
+#contacto input[type="submit"]{
+
+	width: 179px;
+	margin: auto;
+	font-family: 'Poppins', sans-serif;
+
+}
+
+.contacto-info {
+
+	display: flex;
+	justify-content: space-around;
+	margin-top: 60px;
+}
+
+.contacto-info img{
+
+	width: 28px;
+	vertical-align: middle;
+	margin-right: 10px;
+
+}
+
+footer{
+	
+	background: #2f2f2f;
+	padding: 40px 0;
+	text-align: center;
+	margin-top: 40px; /*para separar un poco del contacto info*/
+
+}
+
+footer .contenedor{
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column; /*con esto hacemos que los elementos se muestren uno debajo del otro*/
+}
+
+footer img{
+
+	margin: 0 40px;
+	transform: rotate(0); /*imagen rotará*/
+	transition: 0.4s;
+	width:28px;
+	
+}
+
+footer img:hover{
+
+	transform: rotate(360deg); /*imagen rotará*/
+	transition: 0.4s;
+}
+
+footer p{
+
+	color: white;
+	margin-top: 40px;
+}
+
+#whatsapp{
+
+	position: fixed;
+	bottom:5%;
+	right:1%;
+}
+
+html {
+
+	scroll-behavior: smooth;
+}
+
+#miblog, #trabajarConmigo, #servicios, #sobremi, #contacto, #home{
+
+	padding: 50px 0;
+}
+
+#home{
+
+	padding: 30px 0;
+}
+
+#misTrabajos{
+
+	padding: 30px 0;
+}
+
+	/*tablets y telefonos aplica hasta 800px, 480px es la medida estandar para celulares*/
+
+@media (max-width: 800px){ 
+	
+	header {
+		height: 20vh;	
+	}
+
+}
